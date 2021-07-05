@@ -5,7 +5,7 @@
  <title>Title</title>
 </head>
 <body>
-<!-- 상대경로 사용, [현재 URL이 속한 계층 경로 + /save] WEB-INF 밑의 파일은 url로 나오지 않는다.\ -->
+<!-- 상대경로 사용, [현재 URL이 속한 계층 경로 + /save] -->
 <form action="save" method="post">
  username: <input type="text" name="username" />
  age: <input type="text" name="age" />

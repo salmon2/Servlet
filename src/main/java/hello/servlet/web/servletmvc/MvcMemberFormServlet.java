@@ -9,14 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "mvcMemberFormServlet", urlPatterns = "/servlet-mvc/members/new-form")
-public class MvcMemberFormServlet extends HttpServlet {
+    public class MvcMemberFormServlet extends HttpServlet {
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String viewPath = "/WEB-INF/views/new-form.jsp";
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher(viewPath);
-        //클라이언트 -> 서버 -> jsp -> 서버
-        // 서버 내부에서 method 호출하듯 난것 리다이렉트 x
-        requestDispatcher.forward(req, resp);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+        dispatcher.forward(request, response);
     }
 }
