@@ -20,10 +20,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "frontControllerServletV3", urlPatterns = "/front-controller/v3/*")
-public class FrontControllerServiceV3 extends HttpServlet {
+public class FrontControllerServletV3 extends HttpServlet {
     private Map<String, ControllerV3> controllerMap = new HashMap<>();
 
-    public FrontControllerServiceV3(){
+    public FrontControllerServletV3(){
         controllerMap.put("/front-controller/v3/members/new-form", new MemberFormControllerV3());
         controllerMap.put("/front-controller/v3/members/save", new MemberSaveControllerV3());
         controllerMap.put("/front-controller/v3/members", new MemberListControllerV3());
